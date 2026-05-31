@@ -7,4 +7,11 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     langs = list(LANGUAGES.values())
     keyboard = [langs[:4], langs[4:]]
     reply_markup = ReplyKeyboardMarkup(keyboard, resize_keyboard=True, one_time_keyboard=True)
-    await update.message.reply_text("🌐", reply_markup=reply_markup)
+    await update.message.reply_text(
+        "🌐 *Choose your language*\n"
+        "━━━━━━━━━━━━━━━━━━\n"
+        "_Choose · Выберите · Scegli · Alegeți_\n"
+        "_Escolha · اختر · 選択 · 选择_",
+        reply_markup=reply_markup,
+        parse_mode="Markdown",
+    )

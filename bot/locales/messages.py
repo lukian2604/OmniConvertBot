@@ -18,9 +18,10 @@ MESSAGES = {
             "📷 Изображения: png, jpg, webp, heic, svg и др.\n"
             "🎬 Видео и гифки: mp4, avi, mov, webm → даже в mp3 или gif!\n"
             "🎵 Аудио: mp3, flac, ogg, wav, m4a\n"
-            "📄 Документы: docx, xlsx, pptx, txt, pdf, html и др.\n\n"
-            "Просто отправьте файл — бот сам предложит доступные форматы для конвертации.\n"
-            "⚡ Быстро. Удобно. Без регистрации."
+            "📄 Документы: docx, xlsx, pptx, txt, pdf, html и др.\n"
+            "📚 Электронные книги: epub, mobi, azw3, fb2\n"
+            "🗜 Архивы: zip, rar, 7z, tar.gz, cbr, cbz, cb7 и др.\n\n"
+            "Просто отправьте файл — бот сам предложит доступные форматы для конвертации."
         ),
         "converting": "🔄 Конвертирую файл, подождите немного...",
         "format_error": "⚠️ К сожалению, этот формат файлов пока не поддерживается или файл поврежден.",
@@ -38,9 +39,10 @@ MESSAGES = {
             "📷 Images: png, jpg, webp, heic, svg, etc.\n"
             "🎬 Video & GIFs: mp4, avi, mov, webm → even to mp3 or gif!\n"
             "🎵 Audio: mp3, flac, ogg, wav, m4a\n"
-            "📄 Documents: docx, xlsx, pptx, txt, pdf, html, etc.\n\n"
-            "Just send a file — the bot will automatically suggest the available formats.\n"
-            "⚡ Fast. Convenient. No registration required."
+            "📄 Documents: docx, xlsx, pptx, txt, pdf, html, etc.\n"
+            "📚 Ebooks: epub, mobi, azw3, fb2\n"
+            "🗜 Archives: zip, rar, 7z, tar.gz, cbr, cbz, cb7, etc.\n\n"
+            "Just send a file — the bot will automatically suggest the available formats."
         ),
         "converting": "🔄 Converting file, please wait a moment...",
         "format_error": "⚠️ Unfortunately, this file format is not supported yet or the file is corrupted.",
@@ -58,9 +60,10 @@ MESSAGES = {
             "📷 Immagini: png, jpg, webp, heic, svg, ecc.\n"
             "🎬 Video & GIF: mp4, avi, mov, webm → anche in mp3 o gif!\n"
             "🎵 Audio: mp3, flac, ogg, wav, m4a\n"
-            "📄 Documenti: docx, xlsx, pptx, txt, pdf, html, ecc.\n\n"
-            "Invia un file — il bot ti proporrà automaticamente i formati disponibili.\n"
-            "⚡ Rapido. Comodo. Senza registrazione."
+            "📄 Documenti: docx, xlsx, pptx, txt, pdf, html, ecc.\n"
+            "📚 Ebook: epub, mobi, azw3, fb2\n"
+            "🗜 Archivi: zip, rar, 7z, tar.gz, cbr, cbz, cb7, ecc.\n\n"
+            "Invia un file — il bot ti proporrà automaticamente i formati disponibili."
         ),
         "converting": "🔄 Conversione del file in corso, attendi un momento...",
         "format_error": "⚠️ Sfortunatamente, questo formato di file non è ancora supportato o il file è danneggiato.",
@@ -78,11 +81,12 @@ MESSAGES = {
             "📷 Imagini: png, jpg, webp, heic, svg etc.\n"
             "🎬 Video și GIF-uri: mp4, avi, mov, webm → chiar și în mp3 sau gif!\n"
             "🎵 Audio: mp3, flac, ogg, wav, m4a\n"
-            "📄 Documente: docx, xlsx, pptx, txt, pdf, html etc.\n\n"
-            "Trebuie doar să trimiteți un fișier — botul va sugera automat formatele disponibile.\n"
-            "⚡ Rapid. Convenabil. Fără înregistrare."
+            "📄 Documente: docx, xlsx, pptx, txt, pdf, html etc.\n"
+            "📚 Cărți electronice: epub, mobi, azw3, fb2\n"
+            "🗜 Arhive: zip, rar, 7z, tar.gz, cbr, cbz, cb7 etc.\n\n"
+            "Trebuie doar să trimiteți un fișier — botul va sugera automat formatele disponibile."
         ),
-        "converting": "🔄 Se convertește fișierul, vă rugăm să așteptați un moment...",
+        "converting": "🔄 Se convertează fișierul, vă rugăm să așteptați un moment...",
         "format_error": "⚠️ Din păcate, acest format de fișier nu este încă acceptat sau fișierul este deteriorat.",
         "text_error": "📥 Vă rugăm să îmi trimiteți fișierul pe care doriți să îl convertiți.",
         "done": "✅ Gata! Fișierul dvs. a fost convertit cu succes.",
@@ -98,9 +102,10 @@ MESSAGES = {
             "📷 Imagens: png, jpg, webp, heic, svg, etc.\n"
             "🎬 Vídeos e GIFs: mp4, avi, mov, webm → até para mp3 ou gif!\n"
             "🎵 Áudio: mp3, flac, ogg, wav, m4a\n"
-            "📄 Documentos: docx, xlsx, pptx, txt, pdf, html, etc.\n\n"
-            "Basta enviar um arquivo — o bot sugerirá automaticamente os formatos disponíveis.\n"
-            "⚡ Rápido. Conveniente. Sem registro."
+            "📄 Documentos: docx, xlsx, pptx, txt, pdf, html, etc.\n"
+            "📚 Ebooks: epub, mobi, azw3, fb2\n"
+            "🗜 Arquivos compactados: zip, rar, 7z, tar.gz, cbr, cbz, cb7, etc.\n\n"
+            "Basta enviar um arquivo — o bot sugerirá automaticamente os formatos disponíveis."
         ),
         "converting": "🔄 Convertendo o arquivo, por favor aguarde um momento...",
         "format_error": "⚠️ Infelizmente, este formato de arquivo ainda não é suportado ou o arquivo está corrompido.",
@@ -117,9 +122,10 @@ MESSAGES = {
             "📷 الصور: png, jpg, webp, heic, svg وغيرها.\n"
             "🎬 الفيديو والصور المتحركة: mp4, avi, mov, webm ← وحتى إلى mp3 أو gif!\n"
             "🎵 الصوت: mp3, flac, ogg, wav, m4a\n"
-            "📄 المستندات: docx, xlsx, pptx, txt, pdf, html وغيرها.\n\n"
-            "فقط أرسل الملف — وسيقوم البوت تلقائيًا باقتراح الصيغ المتاحة للتحويل.\n"
-            "⚡ سريع. مريح. بدون تسجيل."
+            "📄 المستندات: docx, xlsx, pptx, txt, pdf, html وغيرها.\n"
+            "📚 الكتب الإلكترونية: epub, mobi, azw3, fb2\n"
+            "🗜 الأرشيفات: zip, rar, 7z, tar.gz, cbr, cbz, cb7 وغيرها.\n\n"
+            "فقط أرسل الملف — وسيقوم البوت تلقائيًا باقتراح الصيغ المتاحة للتحويل."
         ),
         "converting": "🔄 جارٍ تحويل الملف، يرجى الانتظار قليلاً...",
         "format_error": "⚠️ عذرًا، هذا تنسيق الملف غير مدعوم حاليًا أو أن الملف تالف.",
@@ -136,9 +142,10 @@ MESSAGES = {
             "📷 画像：png, jpg, webp, heic, svg など\n"
             "🎬 動画・GIF：mp4, avi, mov, webm → mp3やgifへの変換も可能！\n"
             "🎵 音声：mp3, flac, ogg, wav, m4a\n"
-            "📄 ドキュメント：docx, xlsx, pptx, txt, pdf, html など\n\n"
-            "ファイルを送信するだけで、ボットが利用可能な変換形式を自動的に提案します。\n"
-            "⚡ スピーディー。便利。登録不要。"
+            "📄 ドキュメント：docx, xlsx, pptx, txt, pdf, html など\n"
+            "📚 電子書籍：epub, mobi, azw3, fb2\n"
+            "🗜 アーカイブ：zip, rar, 7z, tar.gz, cbr, cbz, cb7 など\n\n"
+            "ファイルを送信するだけで、ボットが利用可能な変換形式を自動的に提案します。"
         ),
         "converting": "🔄 ファイルを変換しています。少々お待ちください...",
         "format_error": "⚠️ 残念ながら、このファイル形式はまだサポートされていないか、ファイルが破損しています。",
@@ -155,9 +162,10 @@ MESSAGES = {
             "📷 图片：png, jpg, webp, heic, svg 等\n"
             "🎬 视频与 GIF：mp4, avi, mov, webm → 甚至可以转换为 mp3 或 gif！\n"
             "🎵 音频：mp3, flac, ogg, wav, m4a\n"
-            "📄 文档：docx, xlsx, pptx, txt, pdf, html 等\n\n"
-            "只需发送文件 — 机器人会自动为您推荐可转换的格式。\n"
-            "⚡ 高效、便捷、无需注册。"
+            "📄 文档：docx, xlsx, pptx, txt, pdf, html 等\n"
+            "📚 电子书：epub, mobi, azw3, fb2\n"
+            "🗜 压缩包：zip, rar, 7z, tar.gz, cbr, cbz, cb7 等\n\n"
+            "只需发送文件 — 机器人会自动为您推荐可转换的格式。"
         ),
         "converting": "🔄 正在转换文件，请稍候...",
         "format_error": "⚠️ 抱歉，目前暂不支持此文件格式，或者文件已损坏。",
