@@ -51,8 +51,8 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
 
         await query.message.reply_text(get(lang, "done"))
 
-    except Exception:
-        logger.exception("Conversion failed: file=%s target=%s", file_name, output_ext)
+    except Exception as exc:
+        logger.exception("Conversion failed: file=%s target=%s error=%s", file_name, output_ext, exc)
         await query.message.reply_text(get(lang, "format_error"))
     finally:
         _cleanup(input_path)

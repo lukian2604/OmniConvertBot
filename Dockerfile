@@ -4,6 +4,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-reco
     ffmpeg \
     libreoffice \
     calibre \
+    xvfb \
     unar \
     p7zip-full \
     poppler-utils \

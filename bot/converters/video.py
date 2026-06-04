@@ -37,7 +37,7 @@ def _ffmpeg(src: str, dst: str) -> None:
     cmd = ["ffmpeg", "-y", "-i", src, dst]
     result = subprocess.run(cmd, capture_output=True)
     if result.returncode != 0:
-        raise RuntimeError(result.stderr.decode())
+        raise RuntimeError(result.stderr.decode("utf-8", errors="replace"))
 
 
 def _to_gif(src: str, dst: str) -> None:
@@ -67,7 +67,7 @@ def _extract_audio(src: str, dst: str) -> None:
         capture_output=True,
     )
     if result.returncode != 0:
-        raise RuntimeError(result.stderr.decode())
+        raise RuntimeError(result.stderr.decode("utf-8", errors="replace"))
 
 
 def _tmp_path(src: str, ext: str) -> str:
