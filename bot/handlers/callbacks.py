@@ -1,3 +1,4 @@
+import asyncio
 import logging
 import os
 import tempfile
@@ -22,12 +23,15 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         return
 
     output_ext = data.split(":", 1)[1]
-    file_id = context.user_data.get("pending_file_id")
-    file_name = context.user_data.get("pending_file_name", "file")
+    msg_id = query.message.message_id
+    pending = context.user_data.get("pending_files", {}).pop(msg_id, None)
 
-    if not file_id:
+    if not pending:
         await query.edit_message_text(get(lang, "format_error"))
         return
+
+    file_id = pending["file_id"]
+    file_name = pending["file_name"]
 
     await query.edit_message_text(get(lang, "converting"))
 
@@ -39,14 +43,15 @@ async def handle_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         input_path = os.path.join(tmp_dir, file_name)
         await tg_file.download_to_drive(input_path)
 
-        output_path = convert(input_path, output_ext)
+        output_path = await asyncio.to_thread(convert, input_path, output_ext)
 
         if os.path.getsize(output_path) > _MAX_OUTPUT_BYTES:
             await query.message.reply_text(get(lang, "result_too_large"))
             return
 
         with open(output_path, "rb") as f:
-            out_name = strip_ext(file_name) + "." + output_ext
+            actual_ext = os.path.splitext(output_path)[1].lstrip(".")
+            out_name = strip_ext(file_name) + "." + actual_ext
             await query.message.reply_document(document=f, filename=out_name)
 
         await query.message.reply_text(get(lang, "done"))

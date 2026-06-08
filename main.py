@@ -17,7 +17,15 @@ load_dotenv()
 
 def main() -> None:
     token = os.environ["BOT_TOKEN"]
-    app = ApplicationBuilder().token(token).build()
+    app = (
+        ApplicationBuilder()
+        .token(token)
+        .concurrent_updates(True)
+        .read_timeout(60)
+        .write_timeout(120)
+        .connect_timeout(30)
+        .build()
+    )
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CallbackQueryHandler(handle_callback, pattern=r"^convert:"))

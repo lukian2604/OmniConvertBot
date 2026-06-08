@@ -47,19 +47,21 @@ async def handle_file(update: Update, context: ContextTypes.DEFAULT_TYPE) -> Non
         await msg.reply_text(get(lang, "format_error"))
         return
 
-    context.user_data["pending_file_id"] = tg_file.file_id
-    context.user_data["pending_file_name"] = file_name
-
     buttons = [
         InlineKeyboardButton(f".{fmt}", callback_data=f"convert:{fmt}")
         for fmt in formats
     ]
     rows = [buttons[i:i+4] for i in range(0, len(buttons), 4)]
-    await msg.reply_text(
+    reply = await msg.reply_text(
         f"📂 `{file_name}`\n\n{get(lang, 'pick_format')}",
         reply_markup=InlineKeyboardMarkup(rows),
         parse_mode="Markdown",
     )
+
+    context.user_data.setdefault("pending_files", {})[reply.message_id] = {
+        "file_id": tg_file.file_id,
+        "file_name": file_name,
+    }
 
 
 def _extract_file(msg):

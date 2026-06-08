@@ -3,9 +3,11 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import threading
 
 _CALIBRE = shutil.which("ebook-convert") or "/Applications/calibre.app/Contents/MacOS/ebook-convert"
 _XVFB = shutil.which("xvfb-run")
+_CALIBRE_LOCK = threading.Lock()
 
 _FORMATS: dict[str, list[str]] = {
     "epub": ["pdf", "mobi", "azw3", "fb2", "txt", "html", "docx"],
@@ -31,8 +33,10 @@ def convert(input_path: str, output_ext: str) -> str:
     env = os.environ.copy()
     if output_ext == "pdf" and sys.platform != "darwin":
         env.setdefault("QT_QPA_PLATFORM", "offscreen")
+        env.setdefault("QTWEBENGINE_CHROMIUM_FLAGS", "--no-sandbox")
 
-    result = subprocess.run(cmd, capture_output=True, env=env)
+    with _CALIBRE_LOCK:
+        result = subprocess.run(cmd, capture_output=True, env=env)
     stderr = result.stderr.decode("utf-8", errors="replace")
     if result.returncode != 0:
         raise RuntimeError(stderr)
